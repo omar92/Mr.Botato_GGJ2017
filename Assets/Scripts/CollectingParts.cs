@@ -205,7 +205,7 @@ public class CollectingParts : MonoBehaviour
                             break;
                         }
 
-
+                        foundPart.GetComponentInChildren<Rigidbody>().isKinematic = true;
                 }
 
 

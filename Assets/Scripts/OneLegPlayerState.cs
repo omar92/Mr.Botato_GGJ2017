@@ -25,7 +25,7 @@ public class OneLegPlayerState :  IPLayerState {
       //  player.GetComponent<BoxCollider>().enabled = true;
       //  player.GetComponent<SphereCollider>().enabled = false;
         player.transform.rotation=(Quaternion.Euler(new Vector3(0f, 0f, 0f)));
-        player.transform.position += Vector3.up * 4;
+        player.transform.position += Vector3.up * 2;
     }
 
     public void Update(GameObject player)

@@ -25,10 +25,11 @@ GameObject:
   - component: {fileID: 114824459023341206}
   - component: {fileID: 20128130144608682}
   - component: {fileID: 54688027058453910}
+  - component: {fileID: 65114757136434940}
   - component: {fileID: 65606434778918456}
   m_Layer: 0
   m_Name: Eye2
-  m_TagString: Untagged
+  m_TagString: LeftEye
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,8 +40,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230046734855142}
-  m_LocalRotation: {x: -0.0027560561, y: 0.50003105, z: 0.008144671, w: 0.86596483}
-  m_LocalPosition: {x: -6.720838, y: 5.955766, z: -8.927449}
+  m_LocalRotation: {x: 0.029221574, y: 0.50019777, z: -0.01689274, w: 0.86525315}
+  m_LocalPosition: {x: -6.705, y: 6.022, z: 2.07}
   m_LocalScale: {x: 0.4456944, y: 0.44569442, z: 0.44569442}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +53,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230046734855142}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -149,6 +150,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65114757136434940
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230046734855142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65606434778918456
 BoxCollider:

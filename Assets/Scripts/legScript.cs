@@ -11,7 +11,7 @@ public class legScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        rb = transform.parent.GetComponentsInParent<Rigidbody>()[1];
+       // rb = transform.parent.GetComponentsInParent<Rigidbody>()[1];
 	}
 	
 	// Update is called once per frame

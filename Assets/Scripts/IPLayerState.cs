@@ -1,16 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class IPLayerState : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+public interface IPLayerState
+{
+    void Start(GameObject self);
+    void Update(GameObject self);
+    void FixedUpdate(GameObject self);
+    void OnEnd(GameObject gameObject);
+}   

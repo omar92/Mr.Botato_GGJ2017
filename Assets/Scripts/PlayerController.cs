@@ -2,15 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private static IPLayerState currentPLayerState = null;
+
+    // Use this for initialization
+    void Start()
+    {
+        SwitchState(new RollingPLayerState(), this.gameObject);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (currentPLayerState != null)
+        {
+            currentPLayerState.Update(this.gameObject);
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (currentPLayerState != null)
+        {
+            currentPLayerState.FixedUpdate(this.gameObject);
+        }
+    }
+
+    public static void SwitchState(IPLayerState newState, GameObject trget)
+    {
+        if(currentPLayerState != null)
+        {
+            currentPLayerState.OnEnd(trget);
+        }
+        currentPLayerState = newState;
+        currentPLayerState.Start(trget);
+    }
 }

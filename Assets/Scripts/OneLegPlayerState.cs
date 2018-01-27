@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneLegPlayerState : MonoBehaviour, IPLayerState {
+public class OneLegPlayerState :  IPLayerState {
 
     private float jumpSpeed = 1000.0f;
     private Rigidbody rb;
@@ -22,30 +22,30 @@ public class OneLegPlayerState : MonoBehaviour, IPLayerState {
         rb = player.GetComponent<Rigidbody>();
         rb.velocity = Vector3.zero;
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-        player.GetComponent<BoxCollider>().enabled = true;
-        player.GetComponent<SphereCollider>().enabled = false;
+      //  player.GetComponent<BoxCollider>().enabled = true;
+      //  player.GetComponent<SphereCollider>().enabled = false;
         player.transform.rotation=(Quaternion.Euler(new Vector3(0f, 0f, 0f)));
-        player.transform.position += transform.up * 5;
+        player.transform.position += Vector3.up * 4;
     }
 
     public void Update(GameObject player)
     {
-        if (Input.GetKeyDown(KeyCode.Space) & isGrounded)
-        { 
-            rb.AddForce(Vector3.up * jumpSpeed);
-            isGrounded = false;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) & isGrounded)
+        //{ 
+        //    rb.AddForce(Vector3.up * jumpSpeed);
+        //    isGrounded = false;
+        //}
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collision");
-        if(collision.collider.tag == "Floor")
-        {
-            Debug.Log("Collision Floor");
-            isGrounded = true;
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("Collision");
+    //    if(collision.collider.tag == "Floor")
+    //    {
+    //        Debug.Log("Collision Floor");
+    //        isGrounded = true;
+    //    }
+    //}
 
     IEnumerator ResetPlayer(GameObject player)
     {

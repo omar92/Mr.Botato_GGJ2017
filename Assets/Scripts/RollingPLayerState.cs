@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RollingPLayerState : MonoBehaviour, IPLayerState
+public class RollingPLayerState : IPLayerState
 {
 
     public float speed = 10.0f;

@@ -37,6 +37,7 @@ public class CollectingParts : MonoBehaviour
                 foundPart.GetComponent<Collider>().isTrigger = false;
                 PlayerController.SwitchState(new OneLegPlayerState(), this.gameObject);
 
+                foundPart.GetComponent<legScript>().enabled = true;
                 //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, 0.1f);
 
                 // StartCoroutine(ResetPlayerRotation());

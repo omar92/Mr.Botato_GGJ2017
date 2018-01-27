@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             CurrentPLayerState.OnEnd(trget);
         }
-        CurrentPLayerState = newState;
+        currentPLayerState = newState;
         CurrentPLayerState.Start(trget);
     }
 }

@@ -2295,7 +2295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1427344629245182, guid: a99792e4592fee54987d33bcd8aea502, type: 2}
       propertyPath: m_Name
-      value: GameObject (3)
+      value: Poop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a99792e4592fee54987d33bcd8aea502, type: 2}

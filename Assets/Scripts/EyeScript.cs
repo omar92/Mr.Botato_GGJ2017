@@ -28,11 +28,8 @@ public class EyeScript : MonoBehaviour, IPart {
     {
     }
 
- 
-	
-	void Update () {
-		
-	}
+
+   
 
     public void Toggle()
     {

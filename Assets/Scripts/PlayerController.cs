@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        SwitchState(new RollingPLayerState(),this.gameObject);
+        SwitchState(new RollingPLayerState(), this.gameObject);
     }
 
     // Update is called once per frame
@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
 
     public static void SwitchState(IPLayerState newState, GameObject trget)
     {
-        currentPLayerState.OnEnd(trget);
+        if(currentPLayerState != null)
+        {
+            currentPLayerState.OnEnd(trget);
+        }
         currentPLayerState = newState;
         currentPLayerState.Start(trget);
     }

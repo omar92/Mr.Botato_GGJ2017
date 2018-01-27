@@ -656,6 +656,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1164235610361372, guid: 696138cc2736f114d9a4cba17a0b0828, type: 2}
+      propertyPath: m_Name
+      value: nose
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 696138cc2736f114d9a4cba17a0b0828, type: 2}
   m_IsPrefabParent: 0
@@ -1443,7 +1447,17 @@ Prefab:
     - target: {fileID: 224559204267091240, guid: 61a1d3aee141223469168efa4b376450,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 54.23678
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114143825807576018, guid: 61a1d3aee141223469168efa4b376450,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 430101006}
+    - target: {fileID: 114143825807576018, guid: 61a1d3aee141223469168efa4b376450,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Toggle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61a1d3aee141223469168efa4b376450, type: 2}
@@ -2291,7 +2305,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1427344629245182, guid: a99792e4592fee54987d33bcd8aea502, type: 2}
       propertyPath: m_Name
-      value: GameObject (3)
+      value: Poop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a99792e4592fee54987d33bcd8aea502, type: 2}

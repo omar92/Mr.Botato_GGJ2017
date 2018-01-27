@@ -4,6 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - LeftArm
+  - RightArm
+  - LeftLeg
+  - RightLeg
+  - LeftEye
+  - RightEye
+  - LeftEar
+  - RightEar
+  - Nose
+  - Floor
   - Poop
   layers:
   - Default

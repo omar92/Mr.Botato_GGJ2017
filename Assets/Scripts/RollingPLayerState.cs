@@ -51,9 +51,6 @@ public class RollingPLayerState : MonoBehaviour, IPLayerState
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, -maxVelocity);
         }
-
-        Debug.Log(rb.velocity);
-
     }
 
     public void OnEnd(GameObject player)

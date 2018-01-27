@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     private static IPLayerState currentPLayerState = null;
+
+    public static IPLayerState CurrentPLayerState
+    {
+        get
+        {
+            return currentPLayerState;
+        }
+    }
 
     // Use this for initialization
     void Start()
@@ -16,26 +23,26 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentPLayerState != null)
+        if (CurrentPLayerState != null)
         {
-            currentPLayerState.Update(this.gameObject);
+            CurrentPLayerState.Update(this.gameObject);
         }
     }
     private void FixedUpdate()
     {
-        if (currentPLayerState != null)
+        if (CurrentPLayerState != null)
         {
-            currentPLayerState.FixedUpdate(this.gameObject);
+            CurrentPLayerState.FixedUpdate(this.gameObject);
         }
     }
 
     public static void SwitchState(IPLayerState newState, GameObject trget)
     {
-        if(currentPLayerState != null)
+        if(CurrentPLayerState != null)
         {
-            currentPLayerState.OnEnd(trget);
+            CurrentPLayerState.OnEnd(trget);
         }
-        currentPLayerState = newState;
-        currentPLayerState.Start(trget);
+        CurrentPLayerState = newState;
+        CurrentPLayerState.Start(trget);
     }
 }

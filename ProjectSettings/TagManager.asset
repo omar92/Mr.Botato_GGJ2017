@@ -15,6 +15,7 @@ TagManager:
   - Nose
   - Floor
   - Poop
+  - Mouth
   layers:
   - Default
   - TransparentFX

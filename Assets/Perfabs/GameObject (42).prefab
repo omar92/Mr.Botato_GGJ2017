@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65202798570891386}
   - component: {fileID: 114739117154802812}
   - component: {fileID: 114758130448349198}
+  - component: {fileID: 114691939003200524}
   m_Layer: 0
   m_Name: RightLeg
   m_TagString: RightLeg
@@ -43,6 +44,7 @@ GameObject:
   - component: {fileID: 23086731911891480}
   - component: {fileID: 65432902683594720}
   - component: {fileID: 114700510675111830}
+  - component: {fileID: 114103737661949964}
   m_Layer: 0
   m_Name: LeftLeg
   m_TagString: LeftLeg
@@ -212,6 +214,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.0000005, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114103737661949964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694080516092734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47cd8ddd6b65e4d47a1b27d24b14bf67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114691939003200524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1246392813890814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47cd8ddd6b65e4d47a1b27d24b14bf67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114700510675111830
 MonoBehaviour:
   m_ObjectHideFlags: 1

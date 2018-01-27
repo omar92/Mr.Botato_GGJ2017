@@ -11,26 +11,25 @@ public class legScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        rb = transform.parent.GetComponentsInParent<Rigidbody>()[1];
+       // rb = transform.parent.GetComponentsInParent<Rigidbody>()[1];
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Space) & isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpSpeed);
-            isGrounded = false;
+            //rb.AddForce(Vector3.up * jumpSpeed);
+            //isGrounded = false;
         }
     }
 
     
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision");
         if (collision.collider.tag == "Floor")
         {
             Debug.Log("Collision Floor");
-            isGrounded = true;
+            //isGrounded = true;
         }
     }
 

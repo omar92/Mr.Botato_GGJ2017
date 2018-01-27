@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4217668438564302}
   - component: {fileID: 114849152411374380}
   - component: {fileID: 20001636409108194}
+  - component: {fileID: 65923379772320768}
   m_Layer: 0
   m_Name: Eye
   m_TagString: RightEye
@@ -77,6 +78,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!65 &65923379772320768
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186916862137300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114849152411374380
 MonoBehaviour:
   m_ObjectHideFlags: 1

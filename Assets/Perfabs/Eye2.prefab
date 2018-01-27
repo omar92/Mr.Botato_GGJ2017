@@ -20,13 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4234550443696560}
   - component: {fileID: 33246830252156040}
-  - component: {fileID: 65079443037136416}
   - component: {fileID: 23830921377183692}
   - component: {fileID: 114824459023341206}
   - component: {fileID: 20128130144608682}
-  - component: {fileID: 54688027058453910}
   - component: {fileID: 65114757136434940}
-  - component: {fileID: 65606434778918456}
   m_Layer: 0
   m_Name: Eye2
   m_TagString: LeftEye
@@ -41,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230046734855142}
   m_LocalRotation: {x: 0.029221574, y: 0.50019777, z: -0.01689274, w: 0.86525315}
-  m_LocalPosition: {x: -6.705, y: 6.022, z: 2.07}
+  m_LocalPosition: {x: 1.95, y: -0.22, z: 6.15}
   m_LocalScale: {x: 0.4456944, y: 0.44569442, z: 0.44569442}
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,33 +121,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230046734855142}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54688027058453910
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230046734855142}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &65079443037136416
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230046734855142}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65114757136434940
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -162,18 +132,6 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65606434778918456
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230046734855142}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000002, y: 0.99999994, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114824459023341206
 MonoBehaviour:

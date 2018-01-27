@@ -12,26 +12,26 @@ public struct Part
 
 
 public class CollectingParts : MonoBehaviour
-{ 
+{
     public Transform[] PartsPositionsInBody;
 
     int legsNum = 0;
     int armsNum = 0;
     int eyesNum = 0;
     int earsNum = 0;
-  
+
     private bool PlayerFoundAPart = false;
     private GameObject foundPart;
     private Rigidbody rb;
 
-    void Start ()
+    void Start()
     {
         rb = GetComponent<Rigidbody>();
-	}
-	
-	void Update ()
+    }
+
+    void Update()
     {
-	    if(PlayerFoundAPart)
+        if (PlayerFoundAPart)
         {
             //if (Input.GetKeyDown(KeyCode.C))
             {
@@ -50,7 +50,7 @@ public class CollectingParts : MonoBehaviour
                                 PlayerController.SwitchState(new OneLegPlayerState(), this.gameObject);
                                 legsNum++;
                             }
-                            else if(legsNum == 1)
+                            else if (legsNum == 1)
                             {
                                 PlayerController.SwitchState(new TwoLegPlayerState(), this.gameObject);
                                 legsNum++;
@@ -82,16 +82,16 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.parent = PartsPositionsInBody[2].transform;
                             foundPart.transform.position = PartsPositionsInBody[2].position;
                             foundPart.transform.rotation = PartsPositionsInBody[2].rotation;
-                            if(armsNum == 0)
-                            {
-                                PlayerController.SwitchState(new OneArmPlayerState(), this.gameObject);
-                                armsNum++;
-                            }
-                            else if(armsNum == 1)
-                            {
-                                PlayerController.SwitchState(new TwoArmPlayerState(), this.gameObject);
-                                armsNum++;
-                            }
+                            //if (armsNum == 0)
+                            //{
+                            //    PlayerController.SwitchState(new OneArmPlayerState(), this.gameObject);
+                            //    armsNum++;
+                            //}
+                            //else if (armsNum == 1)
+                            //{
+                            //    PlayerController.SwitchState(new TwoArmPlayerState(), this.gameObject);
+                            //    armsNum++;
+                            //}
                             break;
                         }
                     case "RightArm":
@@ -99,16 +99,16 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.parent = PartsPositionsInBody[3].transform;
                             foundPart.transform.position = PartsPositionsInBody[3].position;
                             foundPart.transform.rotation = PartsPositionsInBody[3].rotation;
-                            if (armsNum == 0)
-                            {
-                                PlayerController.SwitchState(new OneArmPlayerState(), this.gameObject);
-                                armsNum++;
-                            }
-                            else if (armsNum == 1)
-                            {
-                                PlayerController.SwitchState(new TwoArmPlayerState(), this.gameObject);
-                                armsNum++;
-                            }
+                            //if (armsNum == 0)
+                            //{
+                            //    PlayerController.SwitchState(new OneArmPlayerState(), this.gameObject);
+                            //    armsNum++;
+                            //}
+                            //else if (armsNum == 1)
+                            //{
+                            //    PlayerController.SwitchState(new TwoArmPlayerState(), this.gameObject);
+                            //    armsNum++;
+                            //}
                             break;
                         }
                     case "LeftEye":
@@ -116,17 +116,18 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.parent = PartsPositionsInBody[4].transform;
                             foundPart.transform.position = PartsPositionsInBody[4].position;
                             foundPart.transform.rotation = PartsPositionsInBody[4].rotation;
-
-                            if (eyesNum == 0)
-                            {
-                                PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
-                                eyesNum++;
-                            }
-                            else if (eyesNum == 1)
-                            {
-                                PlayerController.SwitchState(new TwoEyePlayerState(), this.gameObject);
-                                eyesNum++;
-                            }
+                            //foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
+                           // foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
+                            //if (eyesNum == 0)
+                            //{
+                            //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
+                            //    eyesNum++;
+                            //}
+                            //else if (eyesNum == 1)
+                            //{
+                            //    PlayerController.SwitchState(new TwoEyePlayerState(), this.gameObject);
+                            //    eyesNum++;
+                            //}
                             break;
                         }
                     case "RightEye":
@@ -135,16 +136,16 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.position = PartsPositionsInBody[5].position;
                             foundPart.transform.rotation = PartsPositionsInBody[5].rotation;
 
-                            if (eyesNum == 0)
-                            {
-                                PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
-                                eyesNum++;
-                            }
-                            else if (eyesNum == 1)
-                            {
-                                PlayerController.SwitchState(new TwoEyePlayerState(), this.gameObject);
-                                eyesNum++;
-                            }
+                            //if (eyesNum == 0)
+                            //{
+                            //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
+                            //    eyesNum++;
+                            //}
+                            //else if (eyesNum == 1)
+                            //{
+                            //    PlayerController.SwitchState(new TwoEyePlayerState(), this.gameObject);
+                            //    eyesNum++;
+                            //}
                             break;
                         }
                     case "LeftEar":
@@ -153,16 +154,16 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.position = PartsPositionsInBody[6].position;
                             foundPart.transform.rotation = PartsPositionsInBody[6].rotation;
 
-                            if (earsNum == 0)
-                            {
-                                PlayerController.SwitchState(new OneEarPlayerState(), this.gameObject);
-                                eyesNum++;
-                            }
-                            else if (earsNum == 1)
-                            {
-                                PlayerController.SwitchState(new TwoEarPlayerState(), this.gameObject);
-                                earsNum++;
-                            }
+                            //if (earsNum == 0)
+                            //{
+                            //    PlayerController.SwitchState(new OneEarPlayerState(), this.gameObject);
+                            //    eyesNum++;
+                            //}
+                            //else if (earsNum == 1)
+                            //{
+                            //    PlayerController.SwitchState(new TwoEarPlayerState(), this.gameObject);
+                            //    earsNum++;
+                            //}
                             break;
                         }
                     case "RightEar":
@@ -171,16 +172,16 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.position = PartsPositionsInBody[7].position;
                             foundPart.transform.rotation = PartsPositionsInBody[7].rotation;
 
-                            if (earsNum == 0)
-                            {
-                                PlayerController.SwitchState(new OneEarPlayerState(), this.gameObject);
-                                eyesNum++;
-                            }
-                            else if (earsNum == 1)
-                            {
-                                PlayerController.SwitchState(new TwoEarPlayerState(), this.gameObject);
-                                earsNum++;
-                            }
+                            //if (earsNum == 0)
+                            //{
+                            //    PlayerController.SwitchState(new OneEarPlayerState(), this.gameObject);
+                            //    eyesNum++;
+                            //}
+                            //else if (earsNum == 1)
+                            //{
+                            //    PlayerController.SwitchState(new TwoEarPlayerState(), this.gameObject);
+                            //    earsNum++;
+                            //}
                             break;
                         }
 
@@ -190,8 +191,8 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.position = PartsPositionsInBody[8].position;
                             foundPart.transform.rotation = PartsPositionsInBody[8].rotation;
 
-                             PlayerController.SwitchState(new NosePlayerState(), this.gameObject);
-                             
+                           // PlayerController.SwitchState(new NosePlayerState(), this.gameObject);
+
                             break;
                         }
                     case "mouth":
@@ -200,115 +201,48 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.position = PartsPositionsInBody[9].position;
                             foundPart.transform.rotation = PartsPositionsInBody[9].rotation;
 
-                            PlayerController.SwitchState(new MouthPlayerState(), this.gameObject);
+                           // PlayerController.SwitchState(new MouthPlayerState(), this.gameObject);
 
                             break;
                         }
 
-                        foundPart.GetComponentInChildren<Rigidbody>().isKinematic = true;
+                      
                 }
-
-
+                var rb = foundPart.GetComponentInChildren<Rigidbody>();
+                if(rb != null)
+                {
+                    rb.isKinematic = true;
+                }
+                PlayerFoundAPart = false;
+                foundPart = null;
                 //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, 0.1f);
                 // StartCoroutine(ResetPlayerRotation());
                 //StartCoroutine(MovePart(foundPart.gameObject, PartsPositionsInBody[0].position));
             }
         }
-       
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        switch(other.tag)
+        switch (other.tag)
         {
             case "LeftLeg":
-            {
-                    Debug.Log("LEft Arm");
+            case "RightArm":
+            case "LeftArm":
+            case "RightLeg":
+            case "LeftEye":
+            case "RightEye":
+            case "LeftEar":
+            case "RightEar":
+            case "Nose":
+            case "Mouth":
+                {
+                    Debug.Log("found "+ other.tag);
                     PlayerFoundAPart = true;
                     foundPart = other.gameObject;
                     break;
                 }
-            case "RightArm":
-            {
-                    Debug.Log("====> Left Arm");
-                    other.transform.parent = PartsPositionsInBody[0].transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    ////StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "LeftArm":
-            {
-                    Debug.Log("====> Right Leg");
-                    other.transform.parent = PartsPositionsInBody[0].transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    // //StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "RightLeg":
-            {
-                    Debug.Log("====> Right Leg");
-                    other.transform.parent = PartsPositionsInBody[0].transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    ////StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "LeftEye":
-            {
-                    Debug.Log("====> Left Eye");
-                    other.transform.parent = PartsPositionsInBody[0].transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    ////StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "RightEye":
-            {
-                    Debug.Log("====>Right Eye");
-                    other.transform.parent = PartsPositionsInBody[0].transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    // //StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "LeftEar":
-            {
-                    Debug.Log("====> Left Ear");
-                    other.transform.parent = transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    ////StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "RightEar":
-            {
-                    Debug.Log("====> Left Arm");
-                    other.transform.parent = transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    // //StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
-            case "Nose":
-            {
-                    Debug.Log("====> Nose");
-                    other.transform.parent = transform;
-                    other.transform.position = PartsPositionsInBody[0].position;
-                    other.transform.rotation = PartsPositionsInBody[0].rotation;
-                    //other.transform.position = PartsPositionsInBody[0].position;
-                    ////StartCoroutine(MovePart(other.gameObject, PartsPositionsInBody[0].position));
-
-                    break;
-            }
         }
     }
 
@@ -317,7 +251,7 @@ public class CollectingParts : MonoBehaviour
         float elapsedTime = 0;
         float moveTime = 0.5f;
 
-        while(elapsedTime < moveTime)
+        while (elapsedTime < moveTime)
         {
             part.transform.position = Vector3.Lerp(part.transform.position, finalPosition, elapsedTime / moveTime);
             elapsedTime += Time.deltaTime;

@@ -39,9 +39,10 @@ public class CollectingParts : MonoBehaviour
                 {
                     case "LeftLeg":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[0].transform;
-                            foundPart.transform.position = PartsPositionsInBody[0].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[0].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[0].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[0].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[0].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[0].localScale;
                             foundPart.GetComponent<Collider>().isTrigger = false;
                             foundPart.GetComponent<legScript>().enabled = true;
 
@@ -59,9 +60,10 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "RightLeg":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[1].transform;
-                            foundPart.transform.position = PartsPositionsInBody[1].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[1].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[1].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[1].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[1].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[1].localScale;
                             foundPart.GetComponent<Collider>().isTrigger = false;
                             foundPart.GetComponent<legScript>().enabled = true;
 
@@ -79,9 +81,11 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "LeftArm":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[2].transform;
-                            foundPart.transform.position = PartsPositionsInBody[2].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[2].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[2].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[2].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[2].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[2].localScale;
+
                             //if (armsNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneArmPlayerState(), this.gameObject);
@@ -96,9 +100,10 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "RightArm":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[3].transform;
-                            foundPart.transform.position = PartsPositionsInBody[3].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[3].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[3].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[3].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[3].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[3].localScale;
                             //if (armsNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneArmPlayerState(), this.gameObject);
@@ -113,11 +118,12 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "LeftEye":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[4].transform;
-                            foundPart.transform.position = PartsPositionsInBody[4].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[4].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[4].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[4].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[4].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[4].localScale;
                             //foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
-                           // foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
+                            // foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
                             //if (eyesNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
@@ -132,9 +138,10 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "RightEye":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[5].transform;
-                            foundPart.transform.position = PartsPositionsInBody[5].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[5].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[5].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[5].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[5].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[5].localScale;
 
                             //if (eyesNum == 0)
                             //{
@@ -150,10 +157,10 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "LeftEar":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[6].transform;
-                            foundPart.transform.position = PartsPositionsInBody[6].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[6].rotation;
-
+                            foundPart.transform.parent = PartsPositionsInBody[6].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[6].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[6].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[6].localScale;
                             //if (earsNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEarPlayerState(), this.gameObject);
@@ -168,10 +175,10 @@ public class CollectingParts : MonoBehaviour
                         }
                     case "RightEar":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[7].transform;
-                            foundPart.transform.position = PartsPositionsInBody[7].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[7].rotation;
-
+                            foundPart.transform.parent = PartsPositionsInBody[7].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[7].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[7].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[7].localScale;
                             //if (earsNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEarPlayerState(), this.gameObject);
@@ -187,21 +194,23 @@ public class CollectingParts : MonoBehaviour
 
                     case "Nose":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[8].transform;
-                            foundPart.transform.position = PartsPositionsInBody[8].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[8].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[8].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[8].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[8].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[8].localScale;
 
-                           // PlayerController.SwitchState(new NosePlayerState(), this.gameObject);
+                            // PlayerController.SwitchState(new NosePlayerState(), this.gameObject);
 
                             break;
                         }
                     case "mouth":
                         {
-                            foundPart.transform.parent = PartsPositionsInBody[9].transform;
-                            foundPart.transform.position = PartsPositionsInBody[9].position;
-                            foundPart.transform.rotation = PartsPositionsInBody[9].rotation;
+                            foundPart.transform.parent = PartsPositionsInBody[9].parent.transform;
+                            foundPart.transform.localPosition = PartsPositionsInBody[9].localPosition;
+                            foundPart.transform.localRotation = PartsPositionsInBody[9].localRotation;
+                            foundPart.transform.localScale = PartsPositionsInBody[9].localScale;
 
-                           // PlayerController.SwitchState(new MouthPlayerState(), this.gameObject);
+                            // PlayerController.SwitchState(new MouthPlayerState(), this.gameObject);
 
                             break;
                         }

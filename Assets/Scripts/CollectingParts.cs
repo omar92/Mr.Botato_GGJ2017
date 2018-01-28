@@ -24,6 +24,10 @@ public class CollectingParts : MonoBehaviour
     private GameObject foundPart;
     private Rigidbody rb;
 
+    MouseLook lookl;
+    MouseLook lookr;
+    PlayerController protation;
+    Camera camera;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -44,7 +48,7 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.localRotation = PartsPositionsInBody[0].localRotation;
                             foundPart.transform.localScale = PartsPositionsInBody[0].localScale;
                             foundPart.GetComponent<Collider>().isTrigger = false;
-                            foundPart.GetComponent<legScript>().enabled = true;
+                            foundPart.GetComponent<LegScript>().enabled = true;
 
                             if (legsNum == 0)
                             {
@@ -65,7 +69,7 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.localRotation = PartsPositionsInBody[1].localRotation;
                             foundPart.transform.localScale = PartsPositionsInBody[1].localScale;
                             foundPart.GetComponent<Collider>().isTrigger = false;
-                            foundPart.GetComponent<legScript>().enabled = true;
+                            foundPart.GetComponent<LegScript>().enabled = true;
 
                             if (legsNum == 0)
                             {
@@ -122,12 +126,32 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.localPosition = PartsPositionsInBody[4].localPosition;
                             foundPart.transform.localRotation = PartsPositionsInBody[4].localRotation;
                             foundPart.transform.localScale = PartsPositionsInBody[4].localScale;
+                            lookl = GetComponent<MouseLook>();
                             //foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
                             // foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
                             //if (eyesNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
-                            //    eyesNum++;
+                                eyesNum++;
+                            if (eyesNum==2)
+                            {
+                                lookl.enabled = false;
+                                
+                            }
+                            else
+                            {
+                                if (lookl.enabled = true)
+                                {
+
+                                }
+                                else
+                                {
+                                    lookl.enabled = true;
+                                }
+                                camera = GetComponent<Camera>();
+                                protation.transform.rotation = camera.transform.rotation;
+
+                            }
                             //}
                             //else if (eyesNum == 1)
                             //{
@@ -143,10 +167,28 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.localRotation = PartsPositionsInBody[5].localRotation;
                             foundPart.transform.localScale = PartsPositionsInBody[5].localScale;
 
+                            lookr = GetComponent<MouseLook>();
                             //if (eyesNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
-                            //    eyesNum++;
+                            eyesNum++;
+                            if (eyesNum == 2)
+                            {
+                                lookr.enabled = false;
+                            }
+                            else
+                            {
+                                if (lookr.enabled = true)
+                                {
+
+                                }
+                                else {
+                                    lookr.enabled = true;
+                                }
+                                
+                                camera = GetComponent<Camera>();
+                                protation.transform.rotation = camera.transform.rotation;
+                            }
                             //}
                             //else if (eyesNum == 1)
                             //{

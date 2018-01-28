@@ -3,49 +3,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneLegPlayerState :  IPLayerState {
+public class OneLegPlayerState : MonoBehaviour ,IPLayerState {
 
-    private float jumpSpeed = 1000.0f;
+    public float speed = 20.0f;
+    public float maxVelocity = 20.0f;
+
+    private float jumpSpeed = 1.0f;
     private Rigidbody rb;
-    private bool isGrounded = true;
 
+    private LegScript legScript = null;
+
+    
     public void FixedUpdate(GameObject self)
+
     {
+
+        //var v = rb.velocity;
+        //v.x = 0;
+        //v.z = 0;
+        //if (v.y > 5)
+        //{
+        //    v.y = 5;
+        //}
+        //rb.velocity = v;
+        if (Math.Abs(rb.velocity.x) > maxVelocity)
+        {
+            rb.velocity = new Vector3(maxVelocity, 0, rb.velocity.z);
+        }
+        if (Math.Abs(rb.velocity.z) > maxVelocity)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, maxVelocity);
+        }
+
     }
 
     public void OnEnd(GameObject gameObject)
     {
+       
     }
 
     public void Start(GameObject player)
     {
+       
         rb = player.GetComponent<Rigidbody>();
+        legScript = player.GetComponentInChildren<LegScript>();
         rb.velocity = Vector3.zero;
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-      //  player.GetComponent<BoxCollider>().enabled = true;
-      //  player.GetComponent<SphereCollider>().enabled = false;
+        //  player.GetComponent<BoxCollider>().enabled = true;
+        //  player.GetComponent<SphereCollider>().enabled = false;
         player.transform.rotation=(Quaternion.Euler(new Vector3(0f, 0f, 0f)));
         player.transform.position += Vector3.up * 2;
+
+
+
     }
 
     public void Update(GameObject player)
     {
-        //if (Input.GetKeyDown(KeyCode.Space) & isGrounded)
-        //{ 
-        //    rb.AddForce(Vector3.up * jumpSpeed);
-        //    isGrounded = false;
-        //}
-    }
+        float MovmentHorizontal = Input.GetAxis("Horizontal");
+        float MovmentVertical = Input.GetAxis("Vertical");
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("Collision");
-    //    if(collision.collider.tag == "Floor")
-    //    {
-    //        Debug.Log("Collision Floor");
-    //        isGrounded = true;
-    //    }
-    //}
+        Vector3 movement = new Vector3(MovmentHorizontal, 0, MovmentVertical);
+        rb.AddForce(movement * speed);
+
+
+
+
+
+
+        //if ( legScript.IsGrounded)
+        //{
+        //    rb.AddForce(player.transform.up * jumpSpeed,ForceMode.Impulse);
+        //    //legScript.IsGrounded = false;
+        //}
+
+
+
+    }
 
     IEnumerator ResetPlayer(GameObject player)
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class legScript : MonoBehaviour {
+public class LegScript : MonoBehaviour {
 
 
         private float jumpSpeed = 1000.0f;

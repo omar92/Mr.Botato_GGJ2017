@@ -6,23 +6,23 @@ using UnityEngine.UI;
 
 public class Smll : MonoBehaviour,IPart {
 
-    public Smll nose;
-    public Text smelltaxt;
+   // public Smll nose;
+     Text smelltaxt;
 
     void Start()
     {
-        nose = GetComponent<Smll>();
-        smelltaxt = gameObject.GetComponentInChildren<Text>();// GameObject.Find("SmellText").GetComponent<Text>();
+      //  nose = GetComponent<Smll>();
+        smelltaxt = gameObject.GetComponentInChildren<Text>();
         smelltaxt.enabled = false;
     }
     public void Activate()
     {
-        nose.enabled = true;
+        this.enabled = true;
     }
 
     public void Diactiviate()
     {
-        nose.enabled = false;
+        this.enabled = false;
     }
 
     public void DoAction()
@@ -32,7 +32,7 @@ public class Smll : MonoBehaviour,IPart {
 
     public void Toggle()
     {
-        nose.enabled = !nose.enabled;
+        this.enabled = !this.enabled;
     }
     public void OnTriggerEnter(Collider other)
     {

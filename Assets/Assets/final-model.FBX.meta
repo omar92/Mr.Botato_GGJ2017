@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b502393db1df56e40b2dc336af8c2fb6
 timeCreated: 1517132108
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
+=======
+guid: fa07d8e3054fbb74fbd28dd21dcdd053
+timeCreated: 1517130489
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+>>>>>>> 9169679dbe7cdc7736d26ebb5a92fc80df7e3322
   fileIDToRecycleName:
     100000: //RootNode
     100002: Group1
@@ -31,6 +39,17 @@ ModelImporter:
     400020: RetopoGroup003
     400022: RetopoGroup004
     400024: RetopoGroup1
+<<<<<<< HEAD
+=======
+    2100000: 05 - Default
+    2100002: 10 - Default
+    2100004: 09 - Default
+    2100006: 04 - Default
+    2100008: 11 - Default
+    2100010: 06 - Default
+    2100012: _leg 1defaultMat
+    2100014: 07 - Default
+>>>>>>> 9169679dbe7cdc7736d26ebb5a92fc80df7e3322
     2300000: Group1
     2300002: Group1836
     2300004: Group3
@@ -68,10 +87,19 @@ ModelImporter:
     4300020: Group7
     4300022: Group43765
     9500000: //RootNode
+<<<<<<< HEAD
   materials:
     importMaterials: 1
     materialName: 2
     materialSearch: 1
+=======
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+>>>>>>> 9169679dbe7cdc7736d26ebb5a92fc80df7e3322
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -84,6 +112,10 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+<<<<<<< HEAD
+=======
+    importAnimatedCustomProperties: 0
+>>>>>>> 9169679dbe7cdc7736d26ebb5a92fc80df7e3322
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -108,6 +140,11 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+<<<<<<< HEAD
+=======
+    preserveHierarchy: 0
+    indexFormat: 0
+>>>>>>> 9169679dbe7cdc7736d26ebb5a92fc80df7e3322
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

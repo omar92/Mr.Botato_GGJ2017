@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 23600328978541844}
   - component: {fileID: 33466246766951850}
   - component: {fileID: 114589114433629352}
+  - component: {fileID: 114674850146204400}
   m_Layer: 0
   m_Name: Eye
   m_TagString: RightEye
@@ -159,6 +160,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 9053f552d226c384487bdac9533cbea2, type: 2}
+--- !u!114 &114674850146204400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186916862137300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8912b4760d7a1e4b8c6561912d42e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  senseHor: 9
+  senseVer: 9
+  minimumVert: -45
+  maximumVert: 45
 --- !u!114 &114849152411374380
 MonoBehaviour:
   m_ObjectHideFlags: 1

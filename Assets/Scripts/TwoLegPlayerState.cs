@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwoLegPlayerState :  IPLayerState {
+public class TwoLegPlayerState :MonoBehaviour,  IPLayerState {
 
 
     public float speed = 20.0f;
@@ -14,6 +14,16 @@ public class TwoLegPlayerState :  IPLayerState {
 
     private LegScript legScript = null;
 
+    public float senseHor = 9.0f;
+    public float senseVer = 9.0f;
+
+    public float minimumVert = -45.0f;
+    public float maximumVert = 45.0f;
+
+    float _rotationX;
+
+    public PlayerController potato;
+    
 
     public void FixedUpdate(GameObject self)
 
@@ -55,6 +65,7 @@ public class TwoLegPlayerState :  IPLayerState {
         player.transform.rotation = (Quaternion.Euler(new Vector3(0f, 0f, 0f)));
         player.transform.position += Vector3.up * 2;
 
+        potato = GetComponent<PlayerController>();
 
 
     }
@@ -66,7 +77,22 @@ public class TwoLegPlayerState :  IPLayerState {
 
         Vector3 movement = new Vector3(MovmentHorizontal, 0, MovmentVertical);
         rb.AddForce(movement * speed);
+        _rotationX -= Input.GetAxis("Mouse Y") * senseVer;
 
+        _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+        float delta = Input.GetAxis("Mouse X") * senseHor;
+
+        float _rotationY = potato.transform.localEulerAngles.y + delta;
+
+
+        potato.transform.localEulerAngles = new Vector3(_rotationX, _rotationY, 0);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpSpeed);
+           
+        }
 
 
 

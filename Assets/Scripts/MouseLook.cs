@@ -14,8 +14,8 @@ public class MouseLook : MonoBehaviour {
     public float senseHor = 9.0f;
     public float senseVer = 9.0f;
 
-    public float minimumVert = -45.0f;
-    public float maximumVert = 45.0f;
+    public float minimumVert = -90.0f;
+    public float maximumVert = 90.0f;
 
     float _rotationX;
     // using enum for setting values by name instead of remebering it bu numbers

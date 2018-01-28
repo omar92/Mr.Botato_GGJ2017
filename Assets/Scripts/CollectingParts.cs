@@ -13,6 +13,14 @@ public struct Part
 
 public class CollectingParts : MonoBehaviour
 {
+
+    public float senseHor = 9.0f;
+    public float senseVer = 9.0f;
+
+    public float minimumVert = -45.0f;
+    public float maximumVert = 45.0f;
+
+    float _rotationX;
     public Transform[] PartsPositionsInBody;
 
     int legsNum = 0;
@@ -126,12 +134,13 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.localPosition = PartsPositionsInBody[4].localPosition;
                             foundPart.transform.localRotation = PartsPositionsInBody[4].localRotation;
                             foundPart.transform.localScale = PartsPositionsInBody[4].localScale;
-                            lookl = GetComponent<MouseLook>();
+                            lookl = GetComponentInChildren<MouseLook>();
                             //foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
                             // foundPart.GetComponentInChildren<Camera>().rect.position = new Vector2(0, 0);
                             //if (eyesNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
+
                                 eyesNum++;
                             if (eyesNum==2)
                             {
@@ -140,7 +149,7 @@ public class CollectingParts : MonoBehaviour
                             }
                             else
                             {
-                                if (lookl.enabled = true)
+                                if (lookl.enabled )
                                 {
 
                                 }
@@ -148,8 +157,17 @@ public class CollectingParts : MonoBehaviour
                                 {
                                     lookl.enabled = true;
                                 }
-                                camera = GetComponent<Camera>();
-                                protation.transform.rotation = camera.transform.rotation;
+                                //camera = GetComponent<Camera>();
+                                //_rotationX -= Input.GetAxis("Mouse Y") * senseVer;
+
+                                //_rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                                //float delta = Input.GetAxis("Mouse X") * senseHor;
+
+                                //float _rotationY = transform.localEulerAngles.y + delta;
+
+
+                                //transform.localEulerAngles = new Vector3(_rotationX, _rotationY, 0);
 
                             }
                             //}
@@ -167,7 +185,7 @@ public class CollectingParts : MonoBehaviour
                             foundPart.transform.localRotation = PartsPositionsInBody[5].localRotation;
                             foundPart.transform.localScale = PartsPositionsInBody[5].localScale;
 
-                            lookr = GetComponent<MouseLook>();
+                            lookr = GetComponentInChildren<MouseLook>();
                             //if (eyesNum == 0)
                             //{
                             //    PlayerController.SwitchState(new OneEyePlayerState(), this.gameObject);
@@ -178,16 +196,25 @@ public class CollectingParts : MonoBehaviour
                             }
                             else
                             {
-                                if (lookr.enabled = true)
+                                if (lookr.enabled )
                                 {
 
                                 }
                                 else {
                                     lookr.enabled = true;
                                 }
-                                
-                                camera = GetComponent<Camera>();
-                                protation.transform.rotation = camera.transform.rotation;
+
+                               // camera = GetComponent<Camera>();
+                                //_rotationX -= Input.GetAxis("Mouse Y") * senseVer;
+
+                                //_rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                                //float delta = Input.GetAxis("Mouse X") * senseHor;
+
+                                //float _rotationY = transform.localEulerAngles.y + delta;
+
+
+                                //transform.localEulerAngles = new Vector3(_rotationX, _rotationY, 0);
                             }
                             //}
                             //else if (eyesNum == 1)
